@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: whatsapp-chatbot
+    runtime: java
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/whatsapp-chatbot-1.0.0.jar"
+    envVars:
+      - key: JAVA_VERSION
+        value: 21
+    plan: free
